@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-<title>W3.CSS Template</title>
+<title>EmiGas</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="../Styles/bootstrap.css">
@@ -20,47 +20,52 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
 <div class="w3-top bg-primary">
   <div class="header-links ">
     <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-padding-large w3-hover-white w3-large w3-red" href="javascript:void(0);" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
-    <a href="#" class="w3-bar-item w3-button w3-padding-large w3-white">Inicio</a>
-    <a href="./mision.php" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Acerca de nosotros</a>
-    <a href="./glp.php" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Nuestros productos</a>
+    <a href="#" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Inicio</a>
+    <a href="#" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Acerca de nosotros</a>
+    <a href="#" class="w3-bar-item w3-button w3-padding-large w3-white">Nuestros productos</a>
     <a href="#" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Haga su pedido</a>
     <a href="#" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Noticias</a>
   </div>
 
   <!-- Navbar on small screens -->
-  <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium w3-large">
-    <a href="#" class="w3-bar-item w3-button w3-padding-large">Link 1</a>
-    <a href="#" class="w3-bar-item w3-button w3-padding-large">Link 2</a>
-    <a href="#" class="w3-bar-item w3-button w3-padding-large">Link 3</a>
-    <a href="#" class="w3-bar-item w3-button w3-padding-large">Link 4</a>
+  <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium w3-large">    
+    <a href="#" class="w3-bar-item w3-button w3-padding-large">Acerca de Nosotros</a>
+    <a href="#" class="w3-bar-item w3-button w3-padding-large">Nuestros Productos</a>
+    <a href="#" class="w3-bar-item w3-button w3-padding-large">Haga su Pedido</a>
+    <a href="#" class="w3-bar-item w3-button w3-padding-large">Noticias</a>
   </div>
 </div>
 
-<!-- Header -->
-<header class="container" style="padding:128px 16px">
-  <div>
-    <h1 class="w3-margin w3-jumbo">Gases Don Ramón</h1>
-    <p class="w3-xlarge">Proyecto PHP</p>
-    <button class="w3-button w3-black w3-padding-large w3-large w3-margin-top">Comprar</button>
-  </div>
-</header>
+<div class="container" style="padding:100px 16px">
 
-<!-- First Grid -->
-<div class="w3-row-padding w3-padding-64 w3-container">
-  <div class="w3-content">
-    <div class="w3-twothird">
-      <h1>Pipeta</h1>
-      <h5 class="w3-padding-32">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</h5>
+    <img src="../Images/que-es-glp.png" alt="Qué es GLP" class="img-responsive img-thumbnail"/>
+    <hr>
+    <h2>QUÉ ES GLP</h2>
+    <p>El <strong>Gas Licuado de Petróleo (GLP) o gas propano</strong>, se define como un compuesto de varios hidrocarburos 
+    (hidrógeno + carbono), obtenido mediante procesos de refinación del petróleo (refinería) o a partir del 
+    procesamiento del gas natural.</p>
+    <hr>
+    <h2>CARACTERÍSTICAS DEL GLP</h2>
+    <ul>
+        <li>SE PRODUCE EN ESTADO DE VAPOR. A través de los procesos de refinación se licúa, mediante compresión y enfriamiento.</li>
+        <li>NO TIENE COLOR. En su estado líquido es transparente, similar al agua.</li>
+        <li>NO TIENE OLOR. El GLP puro no tiene olor, sin embargo, se adiciona olor artificial (mercaptano), para ser detectado al momento de  presentar escape. </li>
+        <li>NO ES TÓXICO. Sin embargo, no es recomendable respirarlo por mucho tiempo, debido a que desplaza el oxígeno. </li>
+        <li>ES INFLAMABLE. Enciende fuertemente cuando se libera y vaporiza con la más mínima llama o chispa. </li>
+        <li>ES LIMPIO. Cuando se combina con el aire, no forma hollín ni deja mal sabor en los alimentos preparados con éste.</li>
+        
+    </ul>
+    <hr>
+    <img src="../Images/ciclo-glp.png" alt="Ciclo GLP" class="img-responsive img-thumbnail" style="display: block; margin: auto"/>
 
-      <p class="w3-text-grey">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Excepteur sint
-        occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-        laboris nisi ut aliquip ex ea commodo consequat.</p>
-    </div>
+    <hr>
 
-    <div class="w3-third w3-center">
-      <img <source src="../Images/PIPETA DE GAS DE 40 LBRS-500x500.jpg" class="image-intro">
-    </div>
-  </div>
+    <img src="../Images/usos-del-glp.png" alt="Usos del Gas Propano">
+    <hr>
+    <p>El gas propano tiene actualmente más de 1.000 aplicaciones alrededor del mundo,  generando alternativas limpias y eficientes de energía.</p>
+    <p>Sus usos en la industria se describen a continuación:</p>
+    <img src="../Images/cuadro-glp.png" alt="Cuadro GLP" style="display: block; margin: auto" />
+    
 </div>
 
 <!-- Second Grid -->
@@ -79,10 +84,6 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
         laboris nisi ut aliquip ex ea commodo consequat.</p>
     </div>
   </div>
-</div>
-
-<div class="w3-container w3-black w3-center w3-opacity w3-padding-64">
-    <h1 class="w3-margin w3-xlarge">Quote of the day: live life</h1>
 </div>
 
 <!-- Footer -->
