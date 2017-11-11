@@ -32,8 +32,9 @@
             <li><a href="#tab1"><span class="tab-text">Acerca de nosotros</span></a></li>
             <li><a href="#tab2"><span class="tab-text">Nuestros productos</span ></a></li> 
             <li><a href="#tab3"><span class="tab-text">Noticias</span></a></li> 
-            <li><a href="#tab4"><span class="tab-text">Registrarse</span></a></li>
+            <li><a href="#tab4"><span class="tab-text">Realizar pedido</span></a></li>
             <li><a href="#tab5"><span class="tab-text">GLP</span ></a></li>
+            <li><a href="#tab6"><span class="tab-text">Pedidos vigentes</span ></a></li>
         </ul>    
     
 
@@ -125,26 +126,50 @@
 
             <div class="iniciar">
             <article id="tab4">
-                    <h2 class="formulario__titulo">Información Personal</h2>
+                    <h2 class="formulario__titulo">Información del pedido</h2>
                     <form action="" class="formulario">
                             <h4>Nombres:</h4> 
                             <input type="text" id="nom" class="formulario__input">
+                            <br>
+                            <br>
                             <h4>Apellidos:</h4>
                             <input type="text" id="ape" class="formulario__input">
+                            <br>
+                            <br>
                             <h4>Dirección:</h4>
                             <input type="text" id="dir" class="formulario__input">
                             <br>
+                            <br>
+                            <h4>Cedula:</h4>
+                            <input type="number" id="ced" class="formulario__input">
+                            <br>
+                            <br>
                             <h4>Teléfono:</h4>
-                            <input type="text" id="tel" class="formulario__input">
+                            <input type="tel" id="tel" class="formulario__input">
+                            <br>
+                            <br>
+                            <h4>Celular:</h4>
+                            <input type="tel" id="cel" class="formulario__input">
+                            <br>
                             <br>
                             <h4>Correo:</h4>
-                            <input type="text" id="cor" class="formulario__input">
-                            <br><br>
+                            <input type="email" id="cor" class="formulario__input">
+                            <br>
+                            <br>                            
+                            <h4>Productos:</h4>
+                            <select multiple id="prod" class="formulario__input"></select>
+                            <br>                            
+                            <h4>Total:</h4>
+                            <span id="Total">0</span><span>$</span>
+                            <br>
+                            <br>
                             <input type="submit" value="Guardar" class="formulario__submit" onclick="alert(recuperar());">
-                          
+                            <br>
+                            <br>
+                            <input type="button" value="Limpiar" class="formulario__submit" onclick="Clean();">
                     </form>
-                                            
             </article>
+
             <div id="GLP"> 
             <article id="tab5">
             <img src="../Images/que-es-glp.png" alt="Qué es GLP" class="img-responsive img-thumbnail"/>
