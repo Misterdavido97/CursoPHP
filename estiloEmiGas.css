@@ -1,0 +1,137 @@
+*{
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+#cabeceraweb{
+    background-color: #0A5194;
+    color: #fff;
+    font-size: 30px;
+    
+}
+
+.wrap{
+    width: 800px;
+    max-width: 90%;
+    margin: 30px auto;
+}
+
+ul.tabs{
+    width: 100%;
+    background: #0A5194;
+    list-style: none;
+    display: flex;
+}
+
+ul.tabs li{
+    width: 30%;
+}
+
+ul.tabs li a{
+    color: #fff;
+    text-decoration: none;
+    font-size: 25px;
+    text-align: center;
+
+    display: block;
+    padding: 20px 0px;
+}
+
+.active{
+    background: #0A5194;
+}
+
+ul.tabs li a .tab-text{
+    margin-left: 8px;
+}
+
+.secciones{
+    width: 100%;
+    background: #fff;
+}
+
+.secciones article{
+    padding: 30px;
+}
+.secciones article p{
+    text-align: justify;
+}
+
+@media screen and(max-width: 700px){    
+    ul.tabs li{
+        width: none;
+        flex-basis: 0;
+        flex-grow: 1;
+    }
+}
+
+@media screen and(max-width: 650px){
+    ul.tabs li a{
+        padding: 15px 0px;
+    }
+    ul.tabs li a .tab-text{
+    display: none;
+    }
+    .secciones article{
+        padding: 20px;
+    }
+}
+
+.noticias article p{
+    text-align: justify;
+}
+
+#pieprincipal{
+    margin: 15px;
+    padding: 10px;
+    background-color: #0A5194;
+    color: #fff;
+    clear: both;/*Nivela las margenes*/
+    margin-top: 100px;
+}
+
+#formulario{
+    width: 500px;
+    max-width: 100%;
+    margin: auto;
+    margin-top: 30px;
+    padding: 20px;
+    box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.3);
+    position: relative;
+
+}
+
+.formulario__titulo{
+    text-align: center;
+    margin-top: 0;
+    color: rgba(0, 0, 0, 0.7);
+}
+
+.formulario__submit{
+    display: block;
+    width: 50%;
+    font-size: 1.3em;
+}
+
+.formulario__submit{
+    background: #0A5194;
+    color: white;
+    padding: 10px 20px;
+    cursor: pointer;
+    border: none;
+}
+
+.formulario__input{
+    padding: 10px;
+    background: rgba(255, 255, 255, 0.7);
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    margin-bottom: 1px;
+    width: 50%;
+}
