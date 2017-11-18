@@ -17,12 +17,36 @@ $(document).ready(function(){
 /*window.alert('lo q me de la gana');*/
 
 var recuperar = function(nombre, apellido, direccion, telefono){
-    var n = document.getElementById("nom").value;
-    var a = document.getElementById("ape").value;
-    var d = document.getElementById("dir").value;
-    var t = document.getElementById("tel").value;
-    var c = document.getElementById("cor").value;
+    var n = $("#nom").val();
+    var a = $("#ape").val();
+    var d = $("#dir").val();
+    var t = $("#tel").val();
+    var c = $("#cor").val();
 
     var res = ("Registro exitoso");
     return res;
+}
+
+var Clean = function(){
+    $("#nom").val("");
+    $("#ape").val("");
+    $("#dir").val("");
+    $("#ced").val("");
+    $("#tel").val("");
+    $("#cel").val("");
+    $("#cor").val("");
+    $("#prod").val([]);
+
+    $('#Total').text(0);
+}
+
+var SumTotal = function(){
+    var iSum = 0;
+    $.each($("#prod").val(), function(Index, Value){
+        var $option = $("#prod").find('option[value="'+ Value +'"]');
+
+        iSum += parseInt($option.data('price'));
+    });
+
+    $('#Total').text(iSum);
 }

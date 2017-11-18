@@ -4,7 +4,7 @@
  <meta charset="UTF-8"/>
  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
- <meta name=" description content="página de enseñanza html 5"/><!--Descripción de la página web-->
+ <meta name="description" content="página de enseñanza html 5"/>
  <meta name="keywords" content ="html5, css3, javascript, diseño web"/>
 
  <title>emiGas</title>
@@ -127,43 +127,56 @@
             <div class="iniciar">
             <article id="tab4">
                     <h2 class="formulario__titulo">Información del pedido</h2>
-                    <form action="" class="formulario">
+                    <form action="GuardarPedido.php" method="POST" class="formulario">
                             <h4>Nombres:</h4> 
-                            <input type="text" id="nom" class="formulario__input">
+                            <input required type="text" id="nom" name="nombre" class="formulario__input">
                             <br>
                             <br>
                             <h4>Apellidos:</h4>
-                            <input type="text" id="ape" class="formulario__input">
+                            <input required type="text" id="ape" name="apellido" class="formulario__input">
                             <br>
                             <br>
                             <h4>Dirección:</h4>
-                            <input type="text" id="dir" class="formulario__input">
+                            <input required type="text" id="dir" name="direccion" class="formulario__input">
                             <br>
                             <br>
                             <h4>Cedula:</h4>
-                            <input type="number" id="ced" class="formulario__input">
+                            <input required type="number" id="ced" name="cedula" class="formulario__input">
                             <br>
                             <br>
                             <h4>Teléfono:</h4>
-                            <input type="tel" id="tel" class="formulario__input">
+                            <input required type="tel" id="tel" name="telefono" class="formulario__input">
                             <br>
                             <br>
                             <h4>Celular:</h4>
-                            <input type="tel" id="cel" class="formulario__input">
+                            <input required type="tel" id="cel" name="celular" class="formulario__input">
                             <br>
                             <br>
                             <h4>Correo:</h4>
-                            <input type="email" id="cor" class="formulario__input">
+                            <input required type="email" id="cor" name="correo" class="formulario__input">
                             <br>
                             <br>                            
                             <h4>Productos:</h4>
-                            <select multiple id="prod" class="formulario__input"></select>
+                            <select required multiple id="prod" name="productos[]" class="formulario__input" onChange="SumTotal();">
+                                <?php
+                                        include("conexion.php");
+
+                                        $queryPipettes = "SELECT * FROM pipette";
+                                        $pipettes = $conexion->query($queryPipettes);
+
+                                        while($row = $pipettes->fetch_assoc()){
+                                ?>
+                                                <option value="<?php echo $row['PipetteId'] ?>" data-price="<?php echo $row['Price'] ?>"> <?php echo $row['Name'] ?></option>
+                                <?php
+                                        }
+                                ?>
+                            </select>
                             <br>                            
                             <h4>Total:</h4>
                             <span id="Total">0</span><span>$</span>
                             <br>
                             <br>
-                            <input type="submit" value="Guardar" class="formulario__submit" onclick="alert(recuperar());">
+                            <input type="submit" value="Guardar" class="formulario__submit"/>
                             <br>
                             <br>
                             <input type="button" value="Limpiar" class="formulario__submit" onclick="Clean();">
@@ -202,6 +215,53 @@
             </article>
         
                 </div>
+
+                <article id="tab6">
+                    <h2>Pedidos Vijente</h2>
+                    <br>
+                    <br>
+                    <table>
+                        <thead>
+                                <tr>
+                                        <th>Nombre Completo</th>
+                                        <th>Cedula</th>
+                                        <th>Correo</th>
+                                        <th>Pipeta</th>
+                                        <th>Valor</th>
+                                </tr>
+                        </thead>
+                        <tbody>
+                                <?php
+                                        $queryPedidos = "SELECT 
+                                                        p.Name AS PipetteName,
+                                                        p.Price,
+                                                        CONCAT(u.Name, ' ', u.LastName) AS Name,
+                                                        u.DocumentNumber,
+                                                        u.Mail
+                                                  FROM pipette p
+                                                  INNER JOIN userxpippette up
+                                                  ON p.PipetteId = up.PipetteId
+                                                  INNER JOIN user u
+                                                  ON up.UserId = u.UserId
+                                                  ORDER BY up.Id";
+                                        $pedidos = $conexion->query($queryPedidos);
+                                        if($pedidos){
+                                                while($row = $pedidos->fetch_assoc()){
+                                ?>
+                                        <tr>
+                                                <td><?php echo $row['Name'] ?></td>
+                                                <td><?php echo $row['DocumentNumber'] ?></td>
+                                                <td><?php echo $row['Mail'] ?></td>
+                                                <td><?php echo $row['PipetteName'] ?></td>
+                                                <td><?php echo $row['Price'] ?></td>
+                                        </tr>
+                                <?php
+                                                }
+                                        }
+                                ?>
+                        </tbody>
+                    </table>                        
+            </article>
         </div>
         
       </div>
