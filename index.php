@@ -1,3 +1,5 @@
+
+
 <html>
 <head>
 
@@ -22,7 +24,9 @@
 <body>
     <header id="cabeceraweb">
            <h1>EmiGas</h1>
+
     </header>
+
 
     
 
@@ -127,7 +131,7 @@
             <div class="iniciar">
             <article id="tab4">
                     <h2 class="formulario__titulo">Información del pedido</h2>
-                    <form action="" class="formulario">
+                    <form class="formulario" action="test.php">
                             <h4>Nombres:</h4> 
                             <input type="text" id="nom" class="formulario__input">
                             <br>
@@ -167,6 +171,29 @@
                             <br>
                             <br>
                             <input type="button" value="Limpiar" class="formulario__submit" onclick="Clean();">
+                            <?php
+$servername = "localhost";
+$username = "root";
+$password = "******";
+$database = "emiGas";
+
+// Create connection
+$conn = new mysqli($servername, $username, $password, $database);
+
+// Check connection
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+}
+echo "Connected successfully";
+
+$query = mysqli_query($conn, "INSERT INTO Cliente (Cedula) VALUES ('$ced')");
+if($query)
+{
+	echo "Funciona";
+}
+
+
+?> 
                     </form>
             </article>
 
