@@ -1,0 +1,8 @@
+.center-image{
+    text-align: center;
+}
+
+.center-image-bootstrap{
+    margin: auto;
+    display: block;
+}
